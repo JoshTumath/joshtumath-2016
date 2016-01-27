@@ -15,9 +15,9 @@
 
         $(".scroll-down").arctic_scroll();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+        $("#nav-toggle").on("click", function (e) {
             e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
+            $("#nav").toggleClass("open");
         });
 
     });
