@@ -14,10 +14,14 @@
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
-
-        $("#nav-toggle").on("click", function (e) {
+        
+        $("#nav").addClass("closed");
+        
+        $("#nav-toggle")
+        .removeAttr("hidden")
+        .on("click", function (e) {
             e.preventDefault();
-            $("#nav").toggleClass("open");
+            $("#nav").toggleClass("opened closed");
         });
 
     });
