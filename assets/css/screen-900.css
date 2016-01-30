@@ -1,0 +1,77 @@
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+/* Navigation */
+/* XXX: Replace with flexible box model or grid model when more widely
+ * supported. */
+/*body > header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}*/
+
+#nav-toggle {
+  display: none;
+}
+
+body > header h1,
+body > header nav li {
+  float: left;
+  width: 176px;
+  border-right: 1px solid #66B38C;
+}
+
+body > header h1 {
+  border-left: 1px solid #66B38C;
+}
+
+body > header h1 :link,
+body > header h1 :visited {
+  text-align: center;
+}
+
+body > header nav {
+  clear: none;
+  max-height: none;
+}
+
+body > header nav li {
+  border-top: none;
+}
+
+
+/* ==========================================================================
+   10. Footer - The bottom of every page
+   ========================================================================== */
+
+body > footer {
+  overflow:hidden;
+}
+
+#social-networks,
+#license {
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+#social-networks {
+  float:left;
+  width:70%;
+  padding-right:0.5rem; /* IE8 fix */
+  padding-right:8px;
+  padding-bottom:1rem; /* IE8 fix */
+  padding-bottom:16px;
+  padding-left:0;
+  text-align:left;
+}
+
+#license {
+  float:right;
+  width:30%;
+  padding-right:0;
+  padding-left:0.5rem; /* IE8 fix */
+  padding-left:8px;
+  text-align:right;
+}

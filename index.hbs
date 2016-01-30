@@ -11,8 +11,10 @@
                 <h2 class="page-description">{{@blog.description}}</h2>
             </div>
         </div>
-        <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+        <a class="scroll-down icon-arrow-left" href="#beginning-of-content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
     </div>
+    
+    <div id="beginning-of-content"></div>
 
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}

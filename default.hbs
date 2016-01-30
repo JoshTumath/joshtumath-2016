@@ -6,21 +6,23 @@
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    <meta name="description" content="{{meta_description}}">
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     
     {{! Fixes for IE8 }}
     <!--[if lt IE 9]>
-    <script src="{{asset "js/html5shiv.js"}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+    <link rel="stylesheet" href="{{asset "css/screen-500.css"}}" media="(min-width: 500px)">
+    <link rel="stylesheet" href="{{asset "css/screen-900.css"}}" media="(min-width: 900px)">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Lobster+Two:700,400">
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -36,14 +38,19 @@
     </script>
 </head>
 <body class="{{body_class}}">
-
-    {{navigation}}
+    <header>
+        <div class="inner">
+            <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+            
+            {{navigation}}
+        </div>
+    </header>
 
     {{! Everything else gets inserted here }}
     {{{body}}}
     
-    <footer>
-        <div class="wrapper">
+    <footer class="clearfix">
+        <div class="inner">
             <ul id="social-networks">
                 <li>
                     <a href="//twitter.com/JoshTumath">
@@ -81,9 +88,5 @@
     {{! The main JavaScript file for Casper }}
     <script src="{{asset "js/index.js"}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.js"></script>
-    
-    <script>
-        responsiveNav("#nav", { insert: "before" });
-    </script>
 </body>
 </html>

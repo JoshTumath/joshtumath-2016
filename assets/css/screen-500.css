@@ -1,0 +1,14 @@
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+/* Navigation */
+/* XXX: Replace with flexible box model or grid model when more widely
+ * supported. */
+body > header nav ul {
+    overflow: hidden;
+}
+
+body > header nav li {
+    float: left;
+    width: 50%;
+}
