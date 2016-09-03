@@ -8,7 +8,8 @@
 
 <main class="content" role="main">
     <article class="{{post_class}}">
-        <header class="post-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        <header class="post-header{{#unless image}} no-cover{{/unless}}">
+            {{#if image}}<img src="{{image}}" alt="">{{/if}}
             <h1 class="post-title">{{title}}</h1>
             <div class="post-meta">
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
@@ -35,7 +36,7 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-            
+
             <div class="post-comments">
                 <div id="disqus_thread"></div>
                 <script>
@@ -43,12 +44,12 @@
                         this.page.url = '{{url absolute="true"}}';  // Replace PAGE_URL with your page's canonical URL variable
                         this.page.identifier = '{{post.id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                     };
-                    
+
                     (function() {  // DON'T EDIT BELOW THIS LINE
                         var d = document, s = d.createElement('script');
-                        
+
                         s.src = '//joshtumath.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
@@ -56,7 +57,7 @@
             </div>
         </footer>
     </article>
-    
+
     <aside class="read-next">
         {{#next_post}}
         <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
