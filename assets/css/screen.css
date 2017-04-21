@@ -117,7 +117,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", Lato, sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -185,14 +185,10 @@ body {
     height: 100%;
     max-height: 100%;
     background: #333333;
-    font-family: "Merriweather", serif;
-    letter-spacing: 0.01rem;
+    font-family: Lora, serif;
     font-size: 1.8rem;
     line-height: 1.75em;
     color: #3A4145;
-    -webkit-font-feature-settings: 'kern' 1;
-    -moz-font-feature-settings: 'kern' 1;
-    -o-font-feature-settings: 'kern' 1;
     text-rendering: geometricPrecision;
 }
 
@@ -212,7 +208,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -664,7 +660,7 @@ body > header nav.opened {
     font-size: 2.4rem;
     line-height: 2em;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     text-shadow: 0 0 3rem black;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -754,7 +750,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1023,7 +1019,7 @@ body:not(.post-template) .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;
@@ -1115,7 +1111,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1196,7 +1192,7 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 body > footer {
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 1.3rem;
 }
 
